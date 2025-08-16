@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Noto Sans", sans-serif;
+
+  /* Colors */
+  --color-gradient-light: #F9FAFB;
+  --color-gradient-dark: #D2D6DB;
+
+  /* Gradients */
+  --background-image-gradient-light: linear-gradient(-52deg, var(--color-gradient-light) 0%, var(--color-gradient-dark) 100%);
+
+  /* Box shadow */
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --spacing-card-width: 340px;
+}
+
+.page {
+  @apply flex justify-center items-center min-h-screen bg-gradient-light;
+}
+
+.testimonial {
+  @apply flex flex-col gap-y-4 bg-white shadow-card p-6 w-card-width rounded-lg;
+}
+.testimonial__header {
+  @apply flex gap-x-4;
+}
+.testimonial__image {
+  @apply inline-block w-12 h-12;
+}
+.testimonial__name {
+  @apply text-lg font-semibold mb-[1px] text-neutral-900;
+}
+.testimonial__author {
+  /* Container for author info */
+}
+.testimonial__username {
+  @apply text-sm text-neutral-700;
+}
+.testimonial__content {
+  /* Add styles if needed */
+}
+.testimonial__feedback {
+  @apply text-base text-neutral-600 max-h-[120px] text-ellipsis line-clamp-5 overflow-hidden;
+}
+.testimonial__feedback p {
+  @apply m-0;
+}
